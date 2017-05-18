@@ -124,15 +124,14 @@
     //GLOBAL VARIABLES
         //Game
         var randomNumber = 0;
-        var gameRdmNbrSeed = 30;
-        var gameRdmNbrTimes = 100;
-        var crystalRdmNbrSeed = 5;
-        var crystalRdmNbrTimes = 10;
+        var gameRdmNbrSeed = 19;
+        var gameRdmNbrTimes = 120;
+        var crystalRdmNbrSeed = 1;
+        var crystalRdmNbrTimes = 12;
         var randomCrystalValues =[0, 0, 0, 0];
         var totalScore = 0;
         var winCnt;
         var loseCnt;
-
 
     //OBJECTS
 
@@ -188,7 +187,7 @@
 
     function getRandomNumber(times, seed) {
 
-      return randomNbr = Math.floor(Math.random() * times) + seed;
+      return randomNbr = Math.floor((Math.random() * times) + seed);
     }
 
     function createCrystalButtonValue(idx) {
