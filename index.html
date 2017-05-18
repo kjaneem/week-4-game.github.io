@@ -5,10 +5,11 @@
     <!-- viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman</title>
+    <title>Crystal Collector</title>
 
     <!-- reset.css -->
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
@@ -21,12 +22,116 @@
 
 </head>
 <body>
-    <header>Star Wars RPG!</header>
+    <!-- HTML =================================================== HTML BEGIN =====================================-->
+
+<div class="container"> <!-- begin main container -->
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-5" id=gameRdmNbrBox>
+    <h1>Crystals Collector!</h1>      
+    </div>
+    <div class="col-sm-7"> 
+      <p></p>
+    </div>
+  </div>
+</div><br>
+  
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-6" id=instBox>
+      <p>You will be given a random number at the start of the game</p>
+      <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
+      <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+      <p>The value of each crystal is hidden from you until you click on it.</p>
+      <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+    <div class="col-sm-6"> 
+      <p></p>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3" id=gameRdmNbrBox>
+      <p>gameRdmNbrBox</p>
+    </div>
+    <div class="col-sm-2" id=winsLossesBox> 
+      <p>winsLossesBox</p>
+    </div>
+    <div class="col-sm-7"> 
+      <p></p>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+   <div class="row">
+    <div class="col-sm-1">
+      <button id=btn1Box>
+        <img src="assets/images/city.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </button>
+    </div>
+    <div class="col-sm-1"> 
+      <button id=btn2Box>
+        <img src="assets/images/snowflake.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </button>
+    </div>
+    <div class="col-sm-1"> 
+      <button id=btn3Box>
+        <img src="assets/images/rainbow.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </button>
+    </div>
+    <div class="col-sm-1">
+      <button id=btn4Box>
+        <img src="assets/images/purple.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </button>
+    </div>
+    <div class="col-sm-8"> 
+      <p></p>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3" id=totalScoreHdrBox>
+      <p>Your total score is:</p>
+    </div>
+   <div class="col-sm-9"> 
+      <p></p>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3" id=totalScoreBox>
+      <p>totalScoreBox</p>
+    </div>
+    <div class="col-sm-9"> 
+      <p></p>
+    </div>
+  </div>
+</div><br>
+
+</div> <!-- end main container -->
+    <!-- HTML ====================================================HTML END =======================================-->
+    
     <script type="text/javascript">
+
+    //GLOBAL VARIABLES
+
+    //OBJECTS
+
+    //-- LOGIC =================================================== LOGIC BEGIN =======================================
     
     //Asks javascript to better hightlight errors
     "use strict";             
 
+
+    //-- LOGIC ===================================================== LOGIC END ========================================
 
     </script>    
     <!-- javascript -->
