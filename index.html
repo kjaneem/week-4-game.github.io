@@ -123,12 +123,15 @@
 
     //GLOBAL VARIABLES
         //Game
-        randomNumber = 0;
-        gameRdmNbrSeed = 30;
-        gameRdmNbrTimes = 100;
-        crystalRdmNbrSeed = 5;
-        crystalRdmNbrTimes = 10;
-        randomCrystalValues =[0, 0, 0, 0];
+        var randomNumber = 0;
+        var gameRdmNbrSeed = 30;
+        var gameRdmNbrTimes = 100;
+        var crystalRdmNbrSeed = 5;
+        var crystalRdmNbrTimes = 10;
+        var randomCrystalValues =[0, 0, 0, 0];
+        var totalScore = 0;
+        var winCnt;
+        var loseCnt;
 
 
     //OBJECTS
@@ -140,7 +143,11 @@
 
          $(document).ready(function(){
         
-               //get game randomNumber  
+              //initialize
+              winCnt = 0;
+              loseCnt = 0;
+
+              //get game randomNumber  
               randomNumber = getRandomNumber(gameRdmNbrTimes, gameRdmNbrSeed);
               console.log("randomNumber: " + randomNumber)   
 
@@ -157,31 +164,27 @@
                 console.log("randomCrystalValue returned: " + randomCrystalValues[i]);
               }  
 
-              // for (i = 0; i < 4; i++)
-              // {
-              //   console.log(randomCrystalValues[i]);
-              // }
-
-
           }); //end document.ready()
 
-              //handle crystal button click
              $("#btn1Box").on("click", function() {
                 console.log("You clicked button 1!");
+                buttonClicked("#btn1Box", randomCrystalValues[0]);
               });        
 
-              $("#btn2Box").on("click", function() {
+             $("#btn2Box").on("click", function() {
                 console.log("You clicked button 2!");
+                buttonClicked("#btn1Box", randomCrystalValues[1]);
               });        
 
               $("#btn3Box").on("click", function() {
                 console.log("You clicked button 3!");
+                buttonClicked("#btn1Box", randomCrystalValues[2]);
               });        
 
               $("#btn4Box").on("click", function() {
                 console.log("You clicked button 4!");
+                buttonClicked("#btn1Box", randomCrystalValues[3]);
               });        
-
 
     function getRandomNumber(times, seed) {
 
@@ -198,14 +201,24 @@
         return crystalValue;
     }
 
-    // function buttonClicked(id,btnNbr) {
+    function buttonClicked(id,btnValue) {
 
-    //     var btnBoxNum =
+      totalScore += btnValue;
+      console.log("totalScore = " + totalScore);
 
-    //          $("id").on("click", function() {
-    //             console.log("You clicked button " + btnNbr + "!");
-    //           });    
-    // }
+      if (totalScore === randomNumber)
+      {
+          winCnt++;
+          console.log("PLAYER WINS! " + winCnt);
+      }
+
+      if (totalScore > randomNumber)
+      {
+          loseCnt++;
+          console.log("PLAYER LOSES!" + loseCnt);
+      }
+    
+    }
 
     //-- LOGIC ===================================================== LOGIC END ========================================
 
