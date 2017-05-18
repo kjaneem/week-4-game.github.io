@@ -1,0 +1,34 @@
+.container {
+    
+    float: left;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+}
+
+#instBox {
+    color: brown;
+    background-color: yellow;
+
+    clear: right;
+}
+
+#gameRdmNbrBox {
+    background-color: orange;
+    font-size: 4em;
+}
+
+#winsLossesBox {
+    background-color: lightblue;
+
+    clear: right;
+}
+
+#totalScoreHdrBox {
+    background-color: green;
+}
+
+#totalScoreBox {
+    background-color: green;
+    font-size: 4em;
+}
